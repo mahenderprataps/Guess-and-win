@@ -1,20 +1,19 @@
 #guess the correct one
 
-target  = 39
+import random
+
+target = random.randint(1, 100)
 count = 0
 while True :
-    # target  = 39
-    # count = 0
+
     num = int(input("guess : "))
     count+= 1
 
     if num > target :
-        print("High")
+        print("lower")
     elif num < target :
-        print("Low")
+        print("higher")
     else :
         print("Yahoo, correct guess")
         print("count: ",count)
         break
-
-    # count+= 1
